@@ -20,7 +20,7 @@ env:
 #   --from-literal=ECOVACS_EMAIL=myuser \
 #   --from-literal=ECOVACS_PASSWORD=mypassword
 secret:
-  name: "traccar-credentials"
+  name: "ecovacs-credentials"
   emailKey: "ECOVACS_EMAIL"
   passwordKey: "ECOVACS_PASSWORD"
 
