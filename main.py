@@ -16,7 +16,7 @@ from traccar_client import send_osmand_position
 
 device_id = md5(str(time.time()))
 account_id = os.getenv("ECOVACS_EMAIL")
-password_hash = md5(os.getenv("EVOVACS_PASSWORD"))
+password_hash = md5(os.getenv("ECOVACS_PASSWORD"))
 country = os.getenv("COUNTRY_CODE")
 traccar_url = os.getenv("TRACCAR_URL")
 
