@@ -1,0 +1,12 @@
+[project]
+name = "ecovacs-traccar"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "deebot-client",
+]
+
+[tool.uv.sources]
+deebot-client = { git = "https://github.com/JeffResc/deebot-client", rev = "feat/gps-position-event" }

@@ -1,0 +1,39 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/jeffresc/ecovacs-traccar-sync
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+# Environment variables that come from values file
+env:
+  countryCode: "US"
+  traccarUrl: "http://traccar-lb.traccar.svc:5055"
+
+# Secret reference for credentials
+# Users should create a secret with ECOVACS_EMAIL and EVOVACS_PASSWORD keys
+# Example: kubectl create secret generic traccar-credentials \
+#   --from-literal=ECOVACS_EMAIL=myuser \
+#   --from-literal=ECOVACS_PASSWORD=mypassword
+secret:
+  name: "traccar-credentials"
+  emailKey: "ECOVACS_EMAIL"
+  passwordKey: "ECOVACS_PASSWORD"
+
+resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
