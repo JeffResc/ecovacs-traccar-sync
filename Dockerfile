@@ -20,7 +20,7 @@ RUN uv sync --frozen --no-dev
 COPY main.py traccar_client.py ./
 
 # Final stage
-FROM gcr.io/distroless/python3-debian12@sha256:d6e8de85caaf94601d4391ee94fb299c059789eafc8a54d5f232c8ccc6e9603b
+FROM python:3.13-slim
 
 # Set working directory
 WORKDIR /app
@@ -35,4 +35,5 @@ COPY --from=builder /app/main.py /app/traccar_client.py ./
 ENV PYTHONPATH=/app/site-packages
 
 # Run the application
+ENTRYPOINT ["/usr/local/bin/python"]
 CMD ["/app/main.py"]
