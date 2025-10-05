@@ -90,7 +90,7 @@ wheels = [
 [[package]]
 name = "deebot-client"
 version = "0.0.0"
-source = { git = "https://github.com/JeffResc/deebot-client?rev=feat%2Fgps-position-event#b5a7cc41db5fff1e490f109917a69f4dc54a166d" }
+source = { git = "https://github.com/JeffResc/deebot-client?rev=3caa3236d1f88d81a4d537aae8d38e7afb1b4f66#3caa3236d1f88d81a4d537aae8d38e7afb1b4f66" }
 dependencies = [
     { name = "aiohttp" },
     { name = "aiomqtt" },
@@ -117,7 +117,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "deebot-client", git = "https://github.com/JeffResc/deebot-client?rev=feat%2Fgps-position-event" }]
+requires-dist = [{ name = "deebot-client", git = "https://github.com/JeffResc/deebot-client?rev=3caa3236d1f88d81a4d537aae8d38e7afb1b4f66" }]
 
 [[package]]
 name = "frozenlist"

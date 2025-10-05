@@ -9,4 +9,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-deebot-client = { git = "https://github.com/JeffResc/deebot-client", rev = "feat/gps-position-event" }
+deebot-client = { git = "https://github.com/JeffResc/deebot-client", rev = "3caa3236d1f88d81a4d537aae8d38e7afb1b4f66" }
