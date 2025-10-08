@@ -1,5 +1,5 @@
 # Build stage
-FROM python:3.13-slim AS builder
+FROM python:3.14-slim AS builder
 
 # Install uv
 COPY --from=ghcr.io/astral-sh/uv:0.8.23 /uv /usr/local/bin/uv
@@ -20,7 +20,7 @@ RUN uv sync --frozen --no-dev
 COPY main.py traccar_client.py ./
 
 # Final stage
-FROM python:3.13-slim
+FROM python:3.14-slim
 
 # Set working directory
 WORKDIR /app
