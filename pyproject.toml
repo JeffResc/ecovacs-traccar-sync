@@ -7,3 +7,6 @@ requires-python = ">=3.13"
 dependencies = [
     "deebot-client",
 ]
+
+[tool.uv.sources]
+deebot-client = { git = "https://github.com/DeebotUniverse/client.py", tag = "15.1.0" }
