@@ -7,6 +7,3 @@ requires-python = ">=3.13"
 dependencies = [
     "deebot-client",
 ]
-
-[tool.uv.sources]
-deebot-client = { git = "https://github.com/JeffResc/deebot-client", rev = "feat/gps-position-event" }
