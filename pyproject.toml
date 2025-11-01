@@ -9,4 +9,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-deebot-client = { git = "https://github.com/DeebotUniverse/client.py", tag = "16.1.0" }
+deebot-client = { git = "https://github.com/DeebotUniverse/client.py", tag = "16.2.0" }
