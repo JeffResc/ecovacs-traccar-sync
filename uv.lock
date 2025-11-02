@@ -107,7 +107,7 @@ wheels = [
 [[package]]
 name = "deebot-client"
 version = "0.0.0"
-source = { git = "https://github.com/DeebotUniverse/client.py?tag=16.2.0#ba38147fb5cf8b6ab0772d72dad8efee7f0536a8" }
+source = { git = "https://github.com/DeebotUniverse/client.py?tag=16.3.0#68b0f6162883062f9277ef297e9971a341b46d76" }
 dependencies = [
     { name = "aiohttp" },
     { name = "aiomqtt" },
@@ -134,7 +134,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "deebot-client", git = "https://github.com/DeebotUniverse/client.py?tag=16.2.0" }]
+requires-dist = [{ name = "deebot-client", git = "https://github.com/DeebotUniverse/client.py?tag=16.3.0" }]
 
 [[package]]
 name = "frozenlist"
