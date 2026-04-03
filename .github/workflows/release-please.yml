@@ -1,0 +1,52 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  packages: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+      version: ${{ steps.release.outputs.version }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+  docker:
+    name: Build & Push Docker Image
+    needs: release-please
+    if: needs.release-please.outputs.release_created == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Log in to GitHub Container Registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
+
+      - name: Convert repository name to lowercase
+        run: echo "REPO_NAME=$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+
+      - name: Build and tag Docker image
+        run: |
+          docker build -t ghcr.io/${{ env.REPO_NAME }}:${{ needs.release-please.outputs.version }} .
+          docker tag ghcr.io/${{ env.REPO_NAME }}:${{ needs.release-please.outputs.version }} ghcr.io/${{ env.REPO_NAME }}:latest
+
+      - name: Push Docker image to GHCR
+        run: |
+          docker push ghcr.io/${{ env.REPO_NAME }}:${{ needs.release-please.outputs.version }}
+          docker push ghcr.io/${{ env.REPO_NAME }}:latest
