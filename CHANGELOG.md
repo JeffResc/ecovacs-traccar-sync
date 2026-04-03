@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/JeffResc/ecovacs-traccar-sync/compare/v0.2.0...v0.3.0) (2026-04-03)
+
+
+### Features
+
+* replace python slim with distroless Python image ([fbf9f37](https://github.com/JeffResc/ecovacs-traccar-sync/commit/fbf9f370e5381f5bd84107b0c8dc1e86c8055e76))
+
 ## [0.2.0](https://github.com/JeffResc/ecovacs-traccar-sync/compare/v0.1.0...v0.2.0) (2026-04-03)
 
 
