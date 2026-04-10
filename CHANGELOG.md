@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.1](https://github.com/JeffResc/ecovacs-traccar-sync/compare/v0.3.0...v0.3.1) (2026-04-10)
+
+
+### Miscellaneous
+
+* add changelog-sections to release-please config ([43d877d](https://github.com/JeffResc/ecovacs-traccar-sync/commit/43d877d52f216ed8c3681e4e832ea5c6fbadbb4a))
+* add changelog-sections to release-please config ([923ae1a](https://github.com/JeffResc/ecovacs-traccar-sync/commit/923ae1af2b5efa34adef79cb0daa70ca728efe3d))
+* **deps:** update gcr.io/distroless/python3-debian13 docker digest to ed3a4be ([f774688](https://github.com/JeffResc/ecovacs-traccar-sync/commit/f774688e871fa3947f58ec81efd2f48909fb9796))
+* **deps:** update ghcr.io/astral-sh/uv docker tag to v0.11.6 ([e61aa07](https://github.com/JeffResc/ecovacs-traccar-sync/commit/e61aa0767bbbc1796e4c1452513ea672677b9733))
+
 ## [0.3.0](https://github.com/JeffResc/ecovacs-traccar-sync/compare/v0.2.0...v0.3.0) (2026-04-03)
 
 
