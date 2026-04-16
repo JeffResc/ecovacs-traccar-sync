@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2](https://github.com/JeffResc/ecovacs-traccar-sync/compare/v0.3.1...v0.3.2) (2026-04-16)
+
+
+### Miscellaneous
+
+* **deps:** update ghcr.io/astral-sh/uv docker tag to v0.11.7 ([adc1b4e](https://github.com/JeffResc/ecovacs-traccar-sync/commit/adc1b4e3ca68d7f0f47ffe4fe1c25e5a6bc39dc2))
+* **deps:** update ghcr.io/astral-sh/uv docker tag to v0.11.7 ([8213fcf](https://github.com/JeffResc/ecovacs-traccar-sync/commit/8213fcf59ecccb33c153914c8c83408883c2a816))
+
 ## [0.3.1](https://github.com/JeffResc/ecovacs-traccar-sync/compare/v0.3.0...v0.3.1) (2026-04-10)
 
 
