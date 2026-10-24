@@ -20,7 +20,7 @@ RUN uv sync --frozen --no-dev
 COPY main.py traccar_client.py ./
 
 # Final stage
-FROM gcr.io/distroless/python3-debian13@sha256:178dd00f2da3271f3819df5cd327472754946c7430d82197b247e95e839a3d55
+FROM gcr.io/distroless/python3-debian13@sha256:0db804f397ca31a1498c9d94c3c1df53fe49ac8007e5942b1cb547c1c3355c09
 
 # Set working directory
 WORKDIR /app
